@@ -3,6 +3,8 @@
 #include <iostream>
 #include <fstream>
 
+ShrubberyCreationForm::ShrubberyCreationForm(void);
+
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target)
     : AForm("ShrubberyCreationForm", REQUIRED_SIGN_GRADE, REQUIRED_EXCUTE_GRADE), target_(target)
 {
@@ -28,14 +30,14 @@ ShrubberyCreationForm::~ShrubberyCreationForm(void)
     std::cout << "ShrubberyCreationForm 기본 소멸자 실행" << std::endl;
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
+void ShrubberyCreationForm::execute(Bureaucrat const &bureaucrat) const
 {
     try
     {
-        checkExecute(executor);
+        checkExecute(bureaucrat);
         std::cout << " * A tree has been planted on " << target_ << ". * " << std::endl;
-        std::string fn = target_ + "_shrubbery";
-        std::ofstream ofs(fn.c_str(), std::ios::out | std::ios::app);
+        std::string fileName = target_ + "_shrubbery";
+        std::ofstream ofs(fileName, std::ios::out);
         ofs << ASCII_TREES << std::endl;
     }
     catch (std::exception &e)

@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+Aform::AForm(void) : requiredSignGrade_(), requiredExcuteGrade_() {}
+
 AForm::AForm(const std::string &name,
              const unsigned int requiredSignGrade,
              const unsigned int requiredExcuteGrade) : name_(name), requiredSignGrade_(requiredSignGrade), requiredExcuteGrade_(requiredExcuteGrade)
@@ -69,13 +71,13 @@ void AForm::beSigned(const Bureaucrat &bureaucrat)
     isSigned_ = true;
 }
 
-void AForm::checkExecute(Bureaucrat const &executor) const
+void AForm::checkExecute(Bureaucrat const &bureaucrat) const
 {
     if (!isSigned_)
     {
         throw NotSignedException();
     }
-    unsigned int targetGrade = executor.getGrade();
+    unsigned int targetGrade = bureaucrat.getGrade();
     if (requiredExcuteGrade_ < targetGrade)
     {
         throw GradeTooLowException();

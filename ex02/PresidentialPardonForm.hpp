@@ -12,14 +12,15 @@ private:
     static const int REQUIRED_SIGN_GRADE = 25;
     static const int REQUIRED_EXCUTE_GRADE = 5;
 
-public:
     PresidentialPardonForm(void);
-    PresidentialPardonForm(const std::string &target);
-    PresidentialPardonForm(const PresidentialPardonForm &src);
-    virtual ~PresidentialPardonForm(void);
-    PresidentialPardonForm &operator=(const PresidentialPardonForm &rhs);
 
-    virtual void execute(Bureaucrat const &executor) const;
+public:
+    PresidentialPardonForm(const std::string &target);
+    PresidentialPardonForm(const PresidentialPardonForm &form);
+    virtual ~PresidentialPardonForm(void);
+    PresidentialPardonForm &operator=(const PresidentialPardonForm &form);
+
+    virtual void execute(Bureaucrat const &bureaucrat) const;
     // Informs that <target> has been pardoned by Zaphod Beeblebrox.
     // 자포드 비블브락스는 더글러스 애덤스가 쓴 코믹 과학 소설인 《은하수를 여행하는 히치하이커를 위한 안내서》에 나오는 가상의 등장인물이다.
 };

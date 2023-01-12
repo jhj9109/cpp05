@@ -10,15 +10,15 @@ private:
     const std::string target_;
     static const int REQUIRED_SIGN_GRADE = 72;
     static const int REQUIRED_EXCUTE_GRADE = 45;
+    RobotomyRequestForm(void);
 
 public:
-    RobotomyRequestForm(void);
-    RobotomyRequestForm(const std::string &target = "unknown");
-    RobotomyRequestForm(const RobotomyRequestForm &src);
+    RobotomyRequestForm(const std::string &target);
+    RobotomyRequestForm(const RobotomyRequestForm &form);
     virtual ~RobotomyRequestForm(void);
     RobotomyRequestForm &operator=(const RobotomyRequestForm &rhs);
 
-    virtual void execute(Bureaucrat const &executor) const;
+    virtual void execute(Bureaucrat const &bureaucrat) const;
     // Makes some drilling noises.
     // Then, informs that <target> has been robotomized successfully 50 % of the time.
     // Otherwise, informs that the robotomy failed.

@@ -18,11 +18,13 @@ private:
     const unsigned int requiredSignGrade_;   // const 명시적으로 요구
     const unsigned int requiredExcuteGrade_; // const 명시적으로 요구
 
+    AForm(void);
+
 public:
     // orthodox
-    AForm(const std::string &name = "anonymous",
-          const unsigned int requiredSignGrade = 150,
-          const unsigned int requiredExcuteGrade = 150);
+    AForm(const std::string &name,
+          const unsigned int requiredSignGrade,
+          const unsigned int requiredExcuteGrade);
     AForm(const AForm &form);
     AForm &operator=(const AForm &form);
     virtual ~AForm(void);
@@ -37,8 +39,8 @@ public:
 
     // ex02에서 추가되는 동작
     // sign 여부 & excute 점수 만족하는지, 객체 멤버르 변경 안한다 == const 함수
-    virtual void execute(Bureaucrat const &executor) const = 0;
-    void checkExecute(Bureaucrat const &executor) const;
+    virtual void execute(Bureaucrat const &bureaucrat) const = 0;
+    void checkExecute(Bureaucrat const &bureaucrat) const;
 
     // 오류
     class GradeTooHighException : public std::exception

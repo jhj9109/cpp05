@@ -1,6 +1,8 @@
 #include "RobotomyRequestForm.hpp"
 #include <sys/time.h>
 
+RobotomyRequestForm::RobotomyRequestForm(void) {}
+
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
     : AForm("RobotomyRequestForm", REQUIRED_SIGN_GRADE, REQUIRED_EXCUTE_GRADE), target_(target)
 {
@@ -26,11 +28,12 @@ RobotomyRequestForm::~RobotomyRequestForm(void)
     std::cout << "RobotomyRequestForm 기본 소멸자 실행" << std::endl;
 }
 
-void RobotomyRequestForm::execute(Bureaucrat const &executor) const
+void RobotomyRequestForm::execute(Bureaucrat const &bureaucrat) const
 {
     try
     {
-        checkExecute(executor);
+        checkExecute(bureaucrat);
+        std::cout << target_ << "Some drill noise ... ... ... ... ... ... ... ..." << std::endl;
         struct timeval t;
         gettimeofday(&t, NULL);
         srand(t.tv_usec);

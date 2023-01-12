@@ -18,8 +18,10 @@ private:
     const std::string name_; // const로 명시
     unsigned int grade_;
 
+    Bureaucrat(void);
+
 public:
-    Bureaucrat(const std::string &name = "anonymous", const unsigned int grade = 150);
+    Bureaucrat(const std::string &name, const unsigned int grade);
     Bureaucrat(const Bureaucrat &bureaucrat);
     Bureaucrat &operator=(const Bureaucrat &bureaucrat);
     virtual ~Bureaucrat(void);

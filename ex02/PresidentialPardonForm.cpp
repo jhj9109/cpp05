@@ -1,5 +1,7 @@
 #include "PresidentialPardonForm.hpp"
 
+PresidentialPardonForm::PresidentialPardonForm(void){};
+
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target)
     : AForm("PresidentialPardonForm", REQUIRED_SIGN_GRADE, REQUIRED_EXCUTE_GRADE), target_(target)
 {
@@ -25,11 +27,11 @@ PresidentialPardonForm::~PresidentialPardonForm(void)
     std::cout << "PresidentialPardonForm 기본 소멸자 실행" << std::endl;
 }
 
-void PresidentialPardonForm::execute(Bureaucrat const &executor) const
+void PresidentialPardonForm::execute(Bureaucrat const &bureaucrat) const
 {
     try
     {
-        checkExecute(executor);
+        checkExecute(bureaucrat);
         std::cout << target_ << " has been pardoned by " << PRESIDENT_NAME << std::endl;
     }
     catch (std::exception &e)

@@ -18,11 +18,13 @@ private:
     const unsigned int requiredSignGrade_;   // const 명시적으로 요구
     const unsigned int requiredExcuteGrade_; // const 명시적으로 요구
 
+    Form(void);
+
 public:
     // orthodox
-    Form(const std::string &name = "anonymous",
-         const unsigned int requiredSignGrade = 150,
-         const unsigned int requiredExcuteGrade = 150);
+    Form(const std::string &name,
+         const unsigned int requiredSignGrade,
+         const unsigned int requiredExcuteGrade);
     Form(const Form &form);
     Form &operator=(const Form &form);
     virtual ~Form(void);

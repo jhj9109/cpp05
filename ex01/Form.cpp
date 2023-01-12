@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+Form::Form(void) : requiredSignGrade_(), requiredExcuteGrade_() {}
+
 Form::Form(const std::string &name,
            const unsigned int requiredSignGrade,
            const unsigned int requiredExcuteGrade) : name_(name), requiredSignGrade_(requiredSignGrade), requiredExcuteGrade_(requiredExcuteGrade)

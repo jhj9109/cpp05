@@ -19,7 +19,8 @@ private:
     unsigned int grade_;
 
 public:
-    Bureaucrat(const std::string &name = "anonymous", const unsigned int grade = 150);
+    Bureaucrat(void);
+    Bureaucrat(const std::string &name, const unsigned int grade);
     Bureaucrat(const Bureaucrat &bureaucrat);
     Bureaucrat &operator=(const Bureaucrat &bureaucrat);
     virtual ~Bureaucrat(void);

@@ -20,15 +20,15 @@ private:
     const std::string target_;
     static const int REQUIRED_SIGN_GRADE = 25;
     static const int REQUIRED_EXCUTE_GRADE = 5;
+    ShrubberyCreationForm(void);
 
 public:
-    // ShrubberyCreationForm(void);
     ShrubberyCreationForm(const std::string &target);
-    ShrubberyCreationForm(const ShrubberyCreationForm &src);
+    ShrubberyCreationForm(const ShrubberyCreationForm &form);
     virtual ~ShrubberyCreationForm(void);
-    ShrubberyCreationForm &operator=(const ShrubberyCreationForm &rhs);
+    ShrubberyCreationForm &operator=(const ShrubberyCreationForm &form);
 
-    virtual void execute(Bureaucrat const &executor) const;
+    virtual void execute(Bureaucrat const &bureaucrat) const;
     // Create a file <target>_shrubbery in the working directory, and writes ASCII trees inside it.
 };
 
