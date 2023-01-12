@@ -4,7 +4,7 @@ Bureaucrat::Bureaucrat(void) : grade_() {}
 
 Bureaucrat::Bureaucrat(const std::string &name, const unsigned int grade) : name_(name), grade_(grade)
 {
-    std::cout << "Bureaucrat 기본 생성자 실행 (name: " << name << ", grade: " << grade << ")" << std::endl;
+    std::cout << "Bureaucrat 생성자 실행 (name: " << name << ", grade: " << grade << ")" << std::endl;
     if (grade > MIN_GRADE)
     {
         throw GradeTooLowException();

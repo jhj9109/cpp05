@@ -5,7 +5,7 @@ PresidentialPardonForm::PresidentialPardonForm(void){};
 PresidentialPardonForm::PresidentialPardonForm(const std::string &target)
     : AForm("PresidentialPardonForm", REQUIRED_SIGN_GRADE, REQUIRED_EXCUTE_GRADE), target_(target)
 {
-    std::cout << "PresidentialPardonForm 기본 생성자 실행 (target: " << target << ")" << std::endl;
+    std::cout << "PresidentialPardonForm 생성자 실행 (target: " << target << ")" << std::endl;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &form)

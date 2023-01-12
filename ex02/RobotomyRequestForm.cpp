@@ -6,7 +6,7 @@ RobotomyRequestForm::RobotomyRequestForm(void) {}
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
     : AForm("RobotomyRequestForm", REQUIRED_SIGN_GRADE, REQUIRED_EXCUTE_GRADE), target_(target)
 {
-    std::cout << "RobotomyRequestForm 기본 생성자 실행 (target: " << target << ")" << std::endl;
+    std::cout << "RobotomyRequestForm 생성자 실행 (target: " << target << ")" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &form)

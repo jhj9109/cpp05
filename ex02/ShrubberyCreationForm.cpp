@@ -8,7 +8,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(void);
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target)
     : AForm("ShrubberyCreationForm", REQUIRED_SIGN_GRADE, REQUIRED_EXCUTE_GRADE), target_(target)
 {
-    std::cout << "ShrubberyCreationForm 기본 생성자 실행 (target: " << target << ")" << std::endl;
+    std::cout << "ShrubberyCreationForm 생성자 실행 (target: " << target << ")" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &form)

@@ -8,7 +8,7 @@ Form::Form(const std::string &name,
            const unsigned int requiredSignGrade,
            const unsigned int requiredExcuteGrade) : name_(name), requiredSignGrade_(requiredSignGrade), requiredExcuteGrade_(requiredExcuteGrade)
 {
-    std::cout << "Form 기본 생성자 실행 (name: " << name << ", grade: <"
+    std::cout << "Form 생성자 실행 (name: " << name << ", grade: <"
               << requiredSignGrade << ", " << requiredExcuteGrade << ">)" << std::endl;
 
     if (requiredSignGrade > MIN_GRADE || requiredExcuteGrade > MIN_GRADE)

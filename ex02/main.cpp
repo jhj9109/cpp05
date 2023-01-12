@@ -15,7 +15,7 @@ const std::string DEFAULT = "\033[39m";
 
 int main()
 {
-    Bureaucrat one = Bureaucrat("man", 1);
+    Bureaucrat one = Bureaucrat("one", 1);
     PresidentialPardonForm ppf = PresidentialPardonForm("target1");
     RobotomyRequestForm rrf = RobotomyRequestForm("target2");
     ShrubberyCreationForm scf = ShrubberyCreationForm("target3");
