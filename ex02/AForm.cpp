@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-Aform::AForm(void) : requiredSignGrade_(), requiredExcuteGrade_() {}
+AForm::AForm(void) : requiredSignGrade_(), requiredExcuteGrade_() {}
 
 AForm::AForm(const std::string &name,
              const unsigned int requiredSignGrade,

@@ -1,7 +1,7 @@
 #include "RobotomyRequestForm.hpp"
 #include <sys/time.h>
 
-RobotomyRequestForm::RobotomyRequestForm(void) {}
+RobotomyRequestForm::RobotomyRequestForm(void) : AForm("temp", 150, 150) {}
 
 RobotomyRequestForm::RobotomyRequestForm(const std::string &target)
     : AForm("RobotomyRequestForm", REQUIRED_SIGN_GRADE, REQUIRED_EXCUTE_GRADE), target_(target)
