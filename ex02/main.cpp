@@ -15,10 +15,47 @@ const std::string DEFAULT = "\033[39m";
 
 int main()
 {
+    // std::cout << YELLOW << std::endl;
+    // try
+    // {
+    //     AForm a = AForm();
+    // }
+    // catch (std::exception &e)
+    // {
+    //     std::cout << RED << std::endl;
+    //     std::cerr << e.what() << std::endl;
+    // }
+    // std::cout << YELLOW << std::endl;
+    // try
+    // {
+    //     AForm a = AForm("yaha", 75, 75);
+    // }
+    // catch (std::exception &e)
+    // {
+    //     std::cout << RED << std::endl;
+    //     std::cerr << e.what() << std::endl;
+    // }
+
+    std::cout << DEFAULT << std::endl;
     Bureaucrat one = Bureaucrat("one", 1);
     PresidentialPardonForm ppf = PresidentialPardonForm("target1");
     RobotomyRequestForm rrf = RobotomyRequestForm("target2");
     ShrubberyCreationForm scf = ShrubberyCreationForm("target3");
+
+    Bureaucrat two = Bureaucrat("two", 150);
+    std::cout << YELLOW << std::endl;
+    two.signForm(ppf);
+    two.executeForm(ppf);
+
+    std::cout << CYAN << std::endl;
+    two.signForm(rrf);
+    two.executeForm(rrf);
+
+    std::cout << YELLOW << std::endl;
+    two.signForm(scf);
+    two.executeForm(scf);
+
+    /* 동작 테스트 */
 
     std::cout << BLUE << std::endl;
     one.signForm(ppf);
@@ -28,9 +65,23 @@ int main()
     one.signForm(rrf);
     one.executeForm(rrf);
 
-    std::cout << GREEN << std::endl;
+    std::cout << BLUE << std::endl;
     one.signForm(scf);
     one.executeForm(scf);
+
+    /* 동작 테스트 끝*/
+
+    std::cout << YELLOW << std::endl;
+    two.signForm(ppf);
+    two.executeForm(ppf);
+
+    std::cout << CYAN << std::endl;
+    two.signForm(rrf);
+    two.executeForm(rrf);
+
+    std::cout << YELLOW << std::endl;
+    two.signForm(scf);
+    two.executeForm(scf);
 
     std::cout << MAGENTA << std::endl;
 }
