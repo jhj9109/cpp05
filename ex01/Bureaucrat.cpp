@@ -66,7 +66,6 @@ void Bureaucrat::decreaseGrade(void)
 
 void Bureaucrat::signForm(Form &form)
 {
-    // TODO: 이미 사인 여부를 체크할 필요가 있을까?
     try
     {
         form.beSigned(*this);

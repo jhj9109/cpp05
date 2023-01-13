@@ -21,7 +21,7 @@ int main(void)
     try
     {
         tom.increaseGrade(); // 2 -> 1
-        std::cout << tom << std::endl;
+        std::cout << "tom.increaseGrade() 호출후: " << tom << std::endl;
         tom.increaseGrade(); // 1 -> 에러
     }
     catch (std::exception &e)
@@ -39,7 +39,7 @@ int main(void)
     try
     {
         bob.decreaseGrade(); // 2 -> 1
-        std::cout << bob << std::endl;
+        std::cout << "bob.decreaseGrade() 호출후: " << bob << std::endl;
         bob.decreaseGrade(); // 1 -> 에러
     }
     catch (std::exception &e)
