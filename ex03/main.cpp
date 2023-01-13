@@ -41,11 +41,10 @@ int main()
     delete rrf;
     delete scf;
 
-    // std::cout << CYAN << std::endl;
-    // AForm *failed = someRandomIntern.makeForm("good", "target");
-    // hyeonjan.signForm(*failed);
-    // std::cout << "MakeForm with Illegal Form name: " << failed << std::endl;
+    std::cout << CYAN << std::endl;
+    AForm *failed = someRandomIntern.makeForm("good", "target");
+    std::cout << "MakeForm with Illegal Form name: " << failed << std::endl;
 
-    std::cout << RED << std::endl;
+    std::cout << WHITE << std::endl;
     system("leaks test");
 }
